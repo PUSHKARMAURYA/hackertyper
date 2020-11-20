@@ -40,10 +40,29 @@ input[type="text"]
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <title>Page Title</title>
     </head>
-    <body>
+    <body onload="playAudio();">
+    
     Just Start Typing! [Tap to toggle Keyboard on Mobile Devices]
         <input type="text" id="type" onkeyup="openFullscreen();" />
+        <audio id="myAudio">
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="https://res.cloudinary.com/dqkwzygyv/video/upload/v1605856306/y2mate_mp3cut.net_xcwclv.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+</script>
         <script>
+        
         var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
